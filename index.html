@@ -1,83 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Molana Tipu | Official Website</title>
+<title>Ultimate Molana Tipu | Portfolio</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* ===== LOGO ===== */
-.logo img {
-    width: 220px;
-    max-width: 90%;
-    margin-top: 20px;
+/* ===== Background ===== */
+
+body{
+    background:url("https://images.unsplash.com/photo-1584551246679-0daf3d275d0f") center/cover fixed;
+    color:white;
 }
 
-/* ===== PROFILE PIC SWING ===== */
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid gold;
-    object-fit: cover;
-    animation: swing 4s ease-in-out infinite;
-    transform-origin: top center;
+/* Overlay dark effect */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
 }
 
-@keyframes swing {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(15deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-15deg); }
-    100% { transform: rotate(0deg); }
+/* ===== Hero Layout ===== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:60px;
+    padding:40px 20px;
 }
 
-/* ===== SINGLE IMAGE SECTION ===== */
-.gallery {
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
+/* Text Side */
+
+.hero-text{
+    max-width:520px;
 }
 
-.gallery img {
-    width: 350px;
-    max-width: 90%;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease;
+.hero-text h1{
+    font-size:60px;
+    margin:10px 0;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.hero-text h2{
+    font-size:28px;
+    color:#f1f1f1;
 }
 
-/* ===== MOBILE OPTIMIZATION ===== */
-@media (max-width: 768px) {
+/* Profile Image */
 
-    .profile-pic {
-        width: 130px;
-        height: 130px;
-        animation: swingMobile 4s ease-in-out infinite;
-    }
+.profile-pic{
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    border:6px solid gold;
+    object-fit:cover;
+    animation:swing 4s ease-in-out infinite;
+}
 
-    @keyframes swingMobile {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(10deg); }
-        50% { transform: rotate(0deg); }
-        75% { transform: rotate(-10deg); }
-        100% { transform: rotate(0deg); }
-    }
+/* Swing Animation */
 
-    .gallery img {
-        width: 90%;
-    }
+@keyframes swing{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(12deg);}
+    50%{transform:rotate(0deg);}
+    75%{transform:rotate(-12deg);}
+    100%{transform:rotate(0deg);}
+}
 
-    h1 { font-size: 24px; }
-    h2 { font-size: 18px; }
-    p  { font-size: 15px; }
+/* Quote */
+
+.arabic{
+    font-size:24px;
+    color:gold;
+    margin-top:20px;
+}
+
+/* Cards Section */
+
+.card-section{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:25px;
+    padding:60px 20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.07);
+    backdrop-filter:blur(10px);
+    padding:25px;
+    border-radius:20px;
+    width:280px;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:36px;
+}
+
+.hero-text h2{
+    font-size:20px;
+}
+
+.profile-pic{
+    width:160px;
+    height:160px;
+}
+
 }
 
 </style>
@@ -86,62 +136,75 @@
 
 <body>
 
-<!-- Sound -->
+<!-- Audio -->
 <audio id="welcomeSound">
-    <source src="assalamualaikum.mp3" type="audio/mpeg">
+<source src="assalamualaikum.mp3">
 </audio>
 
 <!-- Logo -->
-<div class="logo">
-    <img src="photo3.png" alt="Molana Tipu Logo">
+<div style="text-align:center;padding-top:25px;">
+<img src="photo3.png" style="width:220px;max-width:90%;">
 </div>
 
-<!-- Intro Section -->
-<section class="intro">
-    <img src="photo1.jpg" alt="Molana Tipu" class="profile-pic">
+<!-- HERO -->
+<section class="hero">
 
-    <h1>Muhammad Rizwan Ahsan</h1>
-    <h2>Also Known As Tipu 😎</h2>
+<div class="hero-text">
 
-    <p>👑 Next Generation Head of Dosani Family</p>
-    <p>📖 Hafiz-e-Quran</p>
-    <p>🎓 9th Class Student</p>
-    <p>🏫 Govt Boys High School No. 02, Umerkot</p>
-    <p>📍 Umerkot, Sindh</p>
+<h1>Muhammad Rizwan Ahsan</h1>
+<h2>Also Known As Tipu 😎</h2>
+
+<p>👑 Next Generation Head of Dosani Family</p>
+<p>📖 Hafiz-e-Quran</p>
+<p>🎓 9th Class Student</p>
+<p>🏫 Govt Boys High School No. 02, Umerkot</p>
+<p>📍 Umerkot, Sindh</p>
+
+<div class="arabic">
+بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم
+</div>
+
+</div>
+
+<img src="photo1.jpg" class="profile-pic">
+
 </section>
 
-<!-- Single Image Section -->
-<section class="gallery">
-    <img src="photo4.jpg" alt="Molana Tipu Image">
+<!-- Powers Cards -->
+<section class="card-section">
+
+<div class="card">
+<h3>⚡ Molana Tipu Powers</h3>
+<p>✔ Quran Memorization Master</p>
+<p>✔ Prayer Leader Mode Activated</p>
+<p>✔ Future Mufti in Family Meetings 😄</p>
+<p>✔ Pocket Money Negotiation Expert</p>
+</div>
+
+<div class="card">
+<h3>😂 Funny Family Level Skills</h3>
+<p>✔ Silent in Madrasa, Loud in Cricket</p>
+<p>✔ Serious Face When Called Molana Sahib</p>
+<p>✔ Cousin Annoyer but Loveable 😁</p>
+</div>
+
 </section>
 
-<!-- Powers Section -->
-<section class="fun">
-    <h2>Molana Tipu Powers ⚡</h2>
-    <ul>
-        <li>✔ Quran Memorization Master</li>
-        <li>✔ Prayer Leader Mode Activated</li>
-        <li>✔ Future Mufti in Family Meetings 😄</li>
-        <li>✔ Pocket Money Negotiation Expert</li>
-    </ul>
-</section>
-
-<!-- Footer -->
-<footer>
-    © 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
+<footer style="text-align:center;padding:25px;color:white;">
+© 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
 </footer>
 
-<!-- Sound Script -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var audio = document.getElementById("welcomeSound");
 
-    audio.play().catch(function() {
-        document.addEventListener("click", function() {
-            audio.play();
-        }, { once: true });
-    });
-});
+/* Sound Play Smart */
+
+document.addEventListener("click", function(){
+
+let audio=document.getElementById("welcomeSound");
+audio.play().catch(()=>{});
+
+},{once:true});
+
 </script>
 
 </body>
