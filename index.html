@@ -35,17 +35,15 @@
     100% { transform: rotate(0deg); }
 }
 
-/* ===== GALLERY SECTION ===== */
+/* ===== SINGLE IMAGE SECTION ===== */
 .gallery {
     display: flex;
     justify-content: center;
-    gap: 30px;
     padding: 40px 20px;
-    flex-wrap: wrap;
 }
 
 .gallery img {
-    width: 300px;
+    width: 350px;
     max-width: 90%;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
@@ -73,11 +71,6 @@
         100% { transform: rotate(0deg); }
     }
 
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .gallery img {
         width: 90%;
     }
@@ -85,7 +78,6 @@
     h1 { font-size: 24px; }
     h2 { font-size: 18px; }
     p  { font-size: 15px; }
-
 }
 
 </style>
@@ -118,10 +110,9 @@
     <p>📍 Umerkot, Sindh</p>
 </section>
 
-<!-- Photo Gallery -->
+<!-- Single Image Section -->
 <section class="gallery">
-    <img src="photo4.jpg" alt="Molana Tipu Image 1">
-    <img src="photo5.jpg" alt="Molana Tipu Image 2">
+    <img src="photo4.jpg" alt="Molana Tipu Image">
 </section>
 
 <!-- Powers Section -->
