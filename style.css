@@ -1,78 +1,66 @@
-/* ===== GLOBAL CENTER WRAPPER ===== */
+/* ===== GLOBAL STYLE SAFE FIX (DO NOT REMOVE YOUR BACKGROUND) ===== */
+
 body{
     margin:0;
     font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f7f7f7;
+    text-align:center;
+
+    /* Important → keeps your mosque / gradient / animation background */
+    background-attachment: fixed;
 }
 
-/* Main Content Container */
-.intro, .gallery, .fun, footer{
-    width: 90%;
-    max-width: 800px;
-    margin: auto;
-    padding: 25px 15px;
+/* Main Content Wrapper */
+.intro, .gallery, .fun{
+    width:92%;
+    max-width:800px;
+    margin:25px auto;
+    padding:25px 15px;
+
+    /* Glass transparent style (keeps 3D feeling) */
+    backdrop-filter: blur(6px);
+    background: rgba(255,255,255,0.08);
+    border-radius:25px;
 }
 
-/* Logo Center Fix */
+/* Logo Center */
 .logo{
     display:flex;
     justify-content:center;
-    align-items:center;
     padding-top:20px;
 }
 
-/* Intro Section Styling */
-.intro{
-    background:white;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    margin-top:20px;
+/* Images Responsive */
+.profile-pic{
+    width:180px;
+    height:180px;
 }
 
-/* Gallery Image Center */
+/* Gallery Image */
 .gallery img{
     width:100%;
-    max-width:400px;
-    height:auto;
+    max-width:420px;
+    border-radius:18px;
 }
 
-/* Fun Section Style */
-.fun{
-    background:white;
-    border-radius:20px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.1);
-    margin-bottom:30px;
-}
-
-/* Footer Style */
+/* Footer */
 footer{
-    font-size:14px;
-    color:#555;
     padding:20px;
+    font-size:14px;
 }
 
 /* Mobile Optimization */
 @media (max-width:768px){
 
-    h1{
-        font-size:22px;
-    }
-
-    h2{
-        font-size:17px;
-    }
-
-    p, li{
-        font-size:15px;
-    }
-
     .profile-pic{
-        width:140px;
-        height:140px;
+        width:130px;
+        height:130px;
     }
 
     .logo img{
-        width:180px;
+        width:170px;
     }
+
+    h1{font-size:23px;}
+    h2{font-size:18px;}
+    p,li{font-size:15px;}
 }
