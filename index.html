@@ -1,3 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HMRAR | Official Website</title>
+
+<style>
+
+/* ===== GLOBAL ===== */
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    text-align:center;
+    color:white;
+    background: url('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f')
+    no-repeat center center fixed;
+    background-size:cover;
+    opacity:0;
+    animation:fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn{
+    to{ opacity:1; }
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.7);
+    z-index:-1;
+}
+
+/* ===== LOGO ===== */
+
+.logo{
+    padding:40px 0 20px;
+}
+
+.logo h1{
+    font-size:44px;
+    letter-spacing:6px;
+    margin:0;
+    font-weight:600;
+    color:gold;
+}
+
+/* ===== INTRO ===== */
+
+.intro{
+    padding:20px 15px 30px;
+    animation:fadeUp 1.4s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(25px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.profile-pic{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:4px solid gold;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.intro h2{
+    margin:10px 0 15px;
+    font-weight:500;
+    color:#f5d97b;
+}
+
+.intro p{
+    margin:6px 0;
+    font-size:16px;
+}
+
+/* ===== GALLERY ===== */
+
+.gallery{
+    padding:40px 15px;
+}
+
+.gallery img{
+    width:340px;
+    max-width:90%;
+    border-radius:15px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* ===== CORE VALUES ===== */
+
+.values{
+    padding:30px 15px 50px;
+    max-width:600px;
+    margin:auto;
+}
+
+.values h2{
+    margin-bottom:20px;
+    color:gold;
+    font-weight:500;
+}
+
+.values ul{
+    text-align:left;
+    list-style:disc;
+    padding-left:25px;
+}
+
+.values li{
+    margin:10px 0;
+    font-size:16px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    background:rgba(0,0,0,0.8);
+    font-size:14px;
+    color:#ccc;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+    .logo h1{
+        font-size:30px;
+        letter-spacing:4px;
+    }
+
+    .profile-pic{
+        width:130px;
+        height:130px;
+    }
+
+    .intro p{
+        font-size:15px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Audio -->
+<audio id="welcomeSound">
+    <source src="assalamualaikum.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Logo -->
+<div class="logo">
+    <h1>HMRAR</h1>
+</div>
+
+<!-- Intro -->
+<section class="intro">
+
+    <img src="photo1.jpg" alt="Profile Photo" class="profile-pic">
+
+    <h2>Muhammad Rizwan Ahsan</h2>
+
+    <p>📖 Hafiz-e-Quran</p>
+    <p>🎓 9th Class Student</p>
+    <p>🏫 Govt Boys High School No. 02, Umerkot</p>
+    <p>📍 Umerkot, Sindh</p>
+
+</section>
+
+<!-- Gallery -->
+<section class="gallery">
+    <img src="photo4.jpg" alt="Profile Image">
+</section>
+
+<!-- Core Values -->
+<section class="values">
+    <h2>Core Values</h2>
+    <ul>
+        <li>Commitment to Quranic Knowledge</li>
+        <li>Discipline in Salah and Daily Routine</li>
+        <li>Respect for Family and Elders</li>
+        <li>Dedication to Education</li>
+        <li>Striving for Leadership with Integrity</li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 HMRAR | Designed & Powered by Bismillah Photostat Umerkot
+</footer>
+
 <script>
 
 var audio = document.getElementById("welcomeSound");
@@ -10,7 +219,7 @@ function attemptPlay() {
         hasPlayed = true;
         removeListeners();
     }).catch(function () {
-        // Autoplay blocked — wait for user interaction
+        // Autoplay blocked, wait for interaction
     });
 }
 
@@ -20,14 +229,17 @@ function removeListeners() {
     document.removeEventListener("scroll", attemptPlay);
 }
 
-/* Try autoplay immediately */
+/* Try autoplay */
 document.addEventListener("DOMContentLoaded", function () {
     attemptPlay();
 });
 
-/* Strong user interaction triggers */
+/* Fallback triggers */
 document.addEventListener("click", attemptPlay);
 document.addEventListener("touchstart", attemptPlay);
 document.addEventListener("scroll", attemptPlay);
 
 </script>
+
+</body>
+</html>
