@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,101 +9,75 @@
 
 <style>
 
-/* ===== HERO LAYOUT ===== */
-
-.hero-container{
-display:flex;
-justify-content:center;
-align-items:center;
-flex-wrap:wrap;
-padding:50px 20px;
-gap:60px;
+/* ===== LOGO ===== */
+.logo img {
+    width: 220px;
+    max-width: 90%;
+    margin-top: 20px;
 }
 
-/* Desktop Text Alignment */
-
-.hero-text{
-max-width:500px;
-text-align:left;
+/* ===== PROFILE PIC SWING ===== */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid gold;
+    object-fit: cover;
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: top center;
 }
 
-/* Name Big Style */
-
-.hero-text h1{
-font-size:52px;
-color:white;
-margin:10px 0;
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
 }
 
-/* Bio */
-
-.hero-text h2{
-color:#f5f5f5;
-font-size:24px;
+/* ===== SINGLE IMAGE SECTION ===== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
 }
 
-/* Profile Image */
-
-.profile-pic{
-width:230px;
-height:230px;
-border-radius:50%;
-border:6px solid gold;
-object-fit:cover;
-animation:swing 4s ease-in-out infinite;
+.gallery img {
+    width: 350px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
 }
 
-/* Swing Animation */
-
-@keyframes swing{
-0%{transform:rotate(0deg);}
-25%{transform:rotate(12deg);}
-50%{transform:rotate(0deg);}
-75%{transform:rotate(-12deg);}
-100%{transform:rotate(0deg);}
+.gallery img:hover {
+    transform: scale(1.05);
 }
 
-/* Arabic Line */
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
 
-.arabic-quote{
-color:gold;
-font-size:22px;
-margin-top:20px;
-}
+    .profile-pic {
+        width: 130px;
+        height: 130px;
+        animation: swingMobile 4s ease-in-out infinite;
+    }
 
-/* Mobile Layout */
+    @keyframes swingMobile {
+        0% { transform: rotate(0deg); }
+        25% { transform: rotate(10deg); }
+        50% { transform: rotate(0deg); }
+        75% { transform: rotate(-10deg); }
+        100% { transform: rotate(0deg); }
+    }
 
-@media(max-width:768px){
+    .gallery img {
+        width: 90%;
+    }
 
-.hero-container{
-flex-direction:column;
-text-align:center;
-}
-
-/* Profile must be top on mobile */
-
-.hero-container{
-order:1;
-}
-
-.hero-text{
-order:2;
-text-align:center;
-}
-
-.hero-text h1{
-font-size:32px;
-}
-
-.hero-text h2{
-font-size:18px;
-}
-
-.profile-pic{
-width:160px;
-height:160px;
-}
-
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+    p  { font-size: 15px; }
 }
 
 </style>
@@ -113,56 +86,63 @@ height:160px;
 
 <body>
 
+<!-- Sound -->
 <audio id="welcomeSound">
-<source src="assalamualaikum.mp3" type="audio/mpeg">
+    <source src="assalamualaikum.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Logo -->
-<div class="logo" style="text-align:center;padding-top:30px;">
-<img src="photo3.png" style="width:220px;max-width:90%;">
+<div class="logo">
+    <img src="photo3.png" alt="Molana Tipu Logo">
 </div>
 
-<!-- HERO SECTION -->
+<!-- Intro Section -->
+<section class="intro">
+    <img src="photo1.jpg" alt="Molana Tipu" class="profile-pic">
 
-<section class="hero-container">
+    <h1>Muhammad Rizwan Ahsan</h1>
+    <h2>Also Known As Tipu 😎</h2>
 
-<img src="photo1.jpg" class="profile-pic">
-
-<div class="hero-text">
-
-<h1>Muhammad Rizwan Ahsan</h1>
-<h2>Also Known As Tipu 😎</h2>
-
-<p>👑 Next Generation Head of Dosani Family</p>
-<p>📖 Hafiz-e-Quran</p>
-<p>🎓 9th Class Student</p>
-<p>🏫 Govt Boys High School No. 02, Umerkot</p>
-<p>📍 Umerkot, Sindh</p>
-
-<div class="arabic-quote">
-watuizumantashawatuzillumantasha
-</div>
-
-</div>
-
+    <p>👑 Next Generation Head of Dosani Family</p>
+    <p>📖 Hafiz-e-Quran</p>
+    <p>🎓 9th Class Student</p>
+    <p>🏫 Govt Boys High School No. 02, Umerkot</p>
+    <p>📍 Umerkot, Sindh</p>
 </section>
 
-<!-- Powers -->
-
-<section style="text-align:center;padding:60px 20px;">
-
-<h2 style="color:white;">Molana Tipu Powers ⚡</h2>
-
-<p>✔ Quran Memorization Master</p>
-<p>✔ Prayer Leader Mode Activated</p>
-<p>✔ Future Mufti in Family Meetings 😄</p>
-<p>✔ Pocket Money Negotiation Expert</p>
-
+<!-- Single Image Section -->
+<section class="gallery">
+    <img src="photo4.jpg" alt="Molana Tipu Image">
 </section>
 
-<footer style="text-align:center;padding:20px;color:white;">
-© 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
+<!-- Powers Section -->
+<section class="fun">
+    <h2>Molana Tipu Powers ⚡</h2>
+    <ul>
+        <li>✔ Quran Memorization Master</li>
+        <li>✔ Prayer Leader Mode Activated</li>
+        <li>✔ Future Mufti in Family Meetings 😄</li>
+        <li>✔ Pocket Money Negotiation Expert</li>
+    </ul>
+</section>
+
+<!-- Footer -->
+<footer>
+    © 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
 </footer>
+
+<!-- Sound Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("welcomeSound");
+
+    audio.play().catch(function() {
+        document.addEventListener("click", function() {
+            audio.play();
+        }, { once: true });
+    });
+});
+</script>
 
 </body>
 </html>
