@@ -1,65 +1,78 @@
-body {
-    margin: 0;
+/* ===== GLOBAL CENTER WRAPPER ===== */
+body{
+    margin:0;
     font-family: Arial, sans-serif;
     text-align: center;
-    color: white;
-    background: url('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f') no-repeat center center fixed;
-    background-size: cover;
+    background: #f7f7f7;
 }
 
-/* Dark overlay */
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
+/* Main Content Container */
+.intro, .gallery, .fun, footer{
+    width: 90%;
+    max-width: 800px;
+    margin: auto;
+    padding: 25px 15px;
 }
 
-.logo {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 20px;
-    letter-spacing: 3px;
+/* Logo Center Fix */
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding-top:20px;
 }
 
-.intro {
-    padding: 40px 20px;
+/* Intro Section Styling */
+.intro{
+    background:white;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    margin-top:20px;
 }
 
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid gold;
-    object-fit: cover;
-    animation: rotatePic 8s linear infinite;
+/* Gallery Image Center */
+.gallery img{
+    width:100%;
+    max-width:400px;
+    height:auto;
 }
 
-@keyframes rotatePic {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/* Fun Section Style */
+.fun{
+    background:white;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom:30px;
 }
 
-.fun {
-    padding: 30px;
+/* Footer Style */
+footer{
+    font-size:14px;
+    color:#555;
+    padding:20px;
 }
 
-.fun ul {
-    list-style: none;
-    padding: 0;
-}
+/* Mobile Optimization */
+@media (max-width:768px){
 
-.fun li {
-    margin: 10px 0;
-    font-size: 18px;
-}
+    h1{
+        font-size:22px;
+    }
 
-footer {
-    margin-top: 40px;
-    padding: 20px;
-    background: rgba(0,0,0,0.7);
+    h2{
+        font-size:17px;
+    }
+
+    p, li{
+        font-size:15px;
+    }
+
+    .profile-pic{
+        width:140px;
+        height:140px;
+    }
+
+    .logo img{
+        width:180px;
+    }
 }
