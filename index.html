@@ -1,132 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- VERY IMPORTANT FOR MOBILE -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Molana Tipu | Official Website</title>
+<link rel="stylesheet" href="style.css">
 
-    <title>Molana Tipu | Official Website</title>
-    <link rel="stylesheet" href="style.css">
+<style>
 
-    <style>
+/* ===== LOGO ===== */
+.logo img {
+    width: 220px;
+    max-width: 90%;
+    margin-top: 20px;
+}
 
-    /* Override profile animation with premium swing */
+/* ===== PROFILE PIC SWING ===== */
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 5px solid gold;
+    object-fit: cover;
+    animation: swing 4s ease-in-out infinite;
+    transform-origin: top center;
+}
+
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* ===== GALLERY SECTION ===== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* ===== MOBILE OPTIMIZATION ===== */
+@media (max-width: 768px) {
+
     .profile-pic {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        border: 5px solid gold;
-        object-fit: cover;
-        animation: swing 4s ease-in-out infinite;
-        transform-origin: top center;
+        width: 130px;
+        height: 130px;
+        animation: swingMobile 4s ease-in-out infinite;
     }
 
-    @keyframes swing {
+    @keyframes swingMobile {
         0% { transform: rotate(0deg); }
-        25% { transform: rotate(15deg); }
+        25% { transform: rotate(10deg); }
         50% { transform: rotate(0deg); }
-        75% { transform: rotate(-15deg); }
+        75% { transform: rotate(-10deg); }
         100% { transform: rotate(0deg); }
     }
 
-    /* ================= MOBILE OPTIMIZATION ================= */
-    @media (max-width: 768px) {
-
-        h1 {
-            font-size: 24px;
-        }
-
-        h2 {
-            font-size: 18px;
-        }
-
-        p {
-            font-size: 15px;
-        }
-
-        .profile-pic {
-            width: 130px;
-            height: 130px;
-            animation: swingMobile 4s ease-in-out infinite;
-        }
-
-        @keyframes swingMobile {
-            0% { transform: rotate(0deg); }
-            25% { transform: rotate(10deg); }
-            50% { transform: rotate(0deg); }
-            75% { transform: rotate(-10deg); }
-            100% { transform: rotate(0deg); }
-        }
-
-        .logo {
-            font-size: 22px;
-        }
-
-        footer {
-            font-size: 13px;
-            padding: 15px;
-        }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
     }
 
-    </style>
+    .gallery img {
+        width: 90%;
+    }
+
+    h1 { font-size: 24px; }
+    h2 { font-size: 18px; }
+    p  { font-size: 15px; }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <!-- Welcome Sound -->
-    <audio id="welcomeSound">
-        <source src="assalamualaikum.mp3" type="audio/mpeg">
-    </audio>
+<!-- Sound -->
+<audio id="welcomeSound">
+    <source src="assalamualaikum.mp3" type="audio/mpeg">
+</audio>
 
-    <!-- Logo -->
-    <div class="logo">
-        🕌 MOLANA TIPU
-    </div>
+<!-- Logo -->
+<div class="logo">
+    <img src="photo3.png" alt="Molana Tipu Logo">
+</div>
 
-    <!-- Intro Section -->
-    <section class="intro">
-        <img src="photo1.jpg" alt="Molana Tipu" class="profile-pic">
+<!-- Intro Section -->
+<section class="intro">
+    <img src="photo1.jpg" alt="Molana Tipu" class="profile-pic">
 
-        <h1>Muhammad Rizwan Ahsan</h1>
-        <h2>Also Known As Tipu 😎</h2>
+    <h1>Muhammad Rizwan Ahsan</h1>
+    <h2>Also Known As Tipu 😎</h2>
 
-        <p>👑 Next Generation Head of Dosani Family</p>
-        <p>📖 Hafiz-e-Quran</p>
-        <p>🎓 9th Class Student</p>
-        <p>🏫 Govt Boys High School No. 02, Umerkot</p>
-        <p>📍 Umerkot, Sindh</p>
-    </section>
+    <p>👑 Next Generation Head of Dosani Family</p>
+    <p>📖 Hafiz-e-Quran</p>
+    <p>🎓 9th Class Student</p>
+    <p>🏫 Govt Boys High School No. 02, Umerkot</p>
+    <p>📍 Umerkot, Sindh</p>
+</section>
 
-    <!-- Powers Section -->
-    <section class="fun">
-        <h2>Molana Tipu Powers ⚡</h2>
-        <ul>
-            <li>✔ Quran Memorization Master</li>
-            <li>✔ Prayer Leader Mode Activated</li>
-            <li>✔ Future Mufti in Family Meetings 😄</li>
-            <li>✔ Pocket Money Negotiation Expert</li>
-        </ul>
-    </section>
+<!-- Photo Gallery -->
+<section class="gallery">
+    <img src="photo4.jpg" alt="Molana Tipu Image 1">
+    <img src="photo5.jpg" alt="Molana Tipu Image 2">
+</section>
 
-    <!-- Footer -->
-    <footer>
-        © 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
-    </footer>
+<!-- Powers Section -->
+<section class="fun">
+    <h2>Molana Tipu Powers ⚡</h2>
+    <ul>
+        <li>✔ Quran Memorization Master</li>
+        <li>✔ Prayer Leader Mode Activated</li>
+        <li>✔ Future Mufti in Family Meetings 😄</li>
+        <li>✔ Pocket Money Negotiation Expert</li>
+    </ul>
+</section>
 
-    <!-- Sound Script -->
-    <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var audio = document.getElementById("welcomeSound");
+<!-- Footer -->
+<footer>
+    © 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
+</footer>
 
-        audio.play().catch(function() {
-            document.addEventListener("click", function() {
-                audio.play();
-            }, { once: true });
-        });
+<!-- Sound Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var audio = document.getElementById("welcomeSound");
+
+    audio.play().catch(function() {
+        document.addEventListener("click", function() {
+            audio.play();
+        }, { once: true });
     });
-    </script>
+});
+</script>
 
 </body>
 </html>
