@@ -3,145 +3,258 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Molana Tipu | Official Website</title>
-<link rel="stylesheet" href="style.css">
+<title>HMRAR | Official Website</title>
 
 <style>
 
-/* ===== LOGO ===== */
-.logo img {
-    width: 220px;
-    max-width: 90%;
-    margin-top: 20px;
+/* ===== GLOBAL ===== */
+
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    color:white;
+    background: url('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f')
+    no-repeat center center fixed;
+    background-size:cover;
+    opacity:0;
+    animation:fadeInPage 1.5s ease forwards;
 }
 
-/* ===== PROFILE PIC SWING ===== */
-.profile-pic {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    border: 5px solid gold;
-    object-fit: cover;
-    animation: swing 4s ease-in-out infinite;
-    transform-origin: top center;
+/* Smooth Page Fade */
+@keyframes fadeInPage{
+    to{ opacity:1; }
 }
 
-@keyframes swing {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(15deg); }
-    50% { transform: rotate(0deg); }
-    75% { transform: rotate(-15deg); }
-    100% { transform: rotate(0deg); }
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    z-index:-1;
 }
 
-/* ===== SINGLE IMAGE SECTION ===== */
-.gallery {
-    display: flex;
-    justify-content: center;
-    padding: 40px 20px;
+/* ===== HMRAR LOGO ===== */
+
+.logo{
+    padding:30px 0 10px;
 }
 
-.gallery img {
-    width: 350px;
-    max-width: 90%;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    transition: transform 0.3s ease;
+.logo h1{
+    font-size:48px;
+    letter-spacing:8px;
+    margin:0;
+    font-weight:bold;
+    background: linear-gradient(45deg, gold, #fff5b1, gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 10px rgba(255,215,0,0.6);
+    transition:0.4s;
 }
 
-.gallery img:hover {
-    transform: scale(1.05);
+.logo h1:hover{
+    text-shadow: 0 0 20px gold;
+    transform:scale(1.05);
 }
 
-/* ===== MOBILE OPTIMIZATION ===== */
-@media (max-width: 768px) {
+/* ===== INTRO ===== */
 
-    .profile-pic {
-        width: 130px;
-        height: 130px;
-        animation: swingMobile 4s ease-in-out infinite;
+.intro{
+    padding:30px 15px;
+    animation:fadeUp 1.5s ease;
+}
+
+.profile-pic{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid gold;
+    object-fit:cover;
+    animation:swing 4s ease-in-out infinite;
+    transform-origin:top center;
+}
+
+@keyframes swing{
+    0%{transform:rotate(0deg);}
+    25%{transform:rotate(12deg);}
+    50%{transform:rotate(0deg);}
+    75%{transform:rotate(-12deg);}
+    100%{transform:rotate(0deg);}
+}
+
+h2{
+    color:gold;
+}
+
+/* ===== FADE UP ANIMATION ===== */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===== GALLERY ===== */
+
+.gallery{
+    display:flex;
+    justify-content:center;
+    padding:40px 15px;
+    animation:fadeUp 1.8s ease;
+}
+
+.gallery img{
+    width:350px;
+    max-width:92%;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.6);
+    transition:0.4s;
+}
+
+.gallery img:hover{
+    transform:scale(1.04);
+}
+
+/* ===== CORE VALUES ===== */
+
+.values{
+    padding:30px 15px 50px;
+    animation:fadeUp 2s ease;
+}
+
+.values ul{
+    list-style:none;
+    padding:0;
+}
+
+.values li{
+    margin:12px 0;
+    font-size:18px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+    margin-top:40px;
+    padding:22px;
+    background:rgba(0,0,0,0.75);
+    font-size:14px;
+    animation:fadeUp 2.2s ease;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:768px){
+
+    .logo h1{
+        font-size:32px;
+        letter-spacing:5px;
     }
 
-    @keyframes swingMobile {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(10deg); }
-        50% { transform: rotate(0deg); }
-        75% { transform: rotate(-10deg); }
-        100% { transform: rotate(0deg); }
+    .profile-pic{
+        width:130px;
+        height:130px;
     }
 
-    .gallery img {
-        width: 90%;
+    .gallery img{
+        width:90%;
     }
 
-    h1 { font-size: 24px; }
-    h2 { font-size: 18px; }
-    p  { font-size: 15px; }
+    p{font-size:15px;}
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- Sound -->
+<!-- Audio -->
 <audio id="welcomeSound">
     <source src="assalamualaikum.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Logo -->
 <div class="logo">
-    <img src="photo3.png" alt="Molana Tipu Logo">
+    <h1>HMRAR</h1>
 </div>
 
-<!-- Intro Section -->
+<!-- Intro -->
 <section class="intro">
-    <img src="photo1.jpg" alt="Molana Tipu" class="profile-pic">
 
-    <h1>Muhammad Rizwan Ahsan</h1>
-    <h2>Also Known As Tipu 😎</h2>
+    <img src="photo1.jpg" alt="Profile" class="profile-pic">
 
-    <p>👑 Next Generation Head of Dosani Family</p>
+    <h2>Muhammad Rizwan Ahsan</h2>
+    <p>Also Known As Tipu 😎</p>
+
     <p>📖 Hafiz-e-Quran</p>
     <p>🎓 9th Class Student</p>
     <p>🏫 Govt Boys High School No. 02, Umerkot</p>
     <p>📍 Umerkot, Sindh</p>
+
 </section>
 
-<!-- Single Image Section -->
+<!-- Gallery -->
 <section class="gallery">
-    <img src="photo4.jpg" alt="Molana Tipu Image">
+    <img src="photo4.jpg" alt="Image">
 </section>
 
-<!-- Powers Section -->
-<section class="fun">
-    <h2>Molana Tipu Powers ⚡</h2>
+<!-- Core Values -->
+<section class="values">
+    <h2>Core Values</h2>
     <ul>
-        <li>✔ Quran Memorization Master</li>
-        <li>✔ Prayer Leader Mode Activated</li>
-        <li>✔ Future Mufti in Family Meetings 😄</li>
-        <li>✔ Pocket Money Negotiation Expert</li>
+        <li>Commitment to Quranic Knowledge</li>
+        <li>Discipline in Salah and Daily Routine</li>
+        <li>Respect for Family and Elders</li>
+        <li>Dedication to Education</li>
+        <li>Striving for Leadership with Integrity</li>
     </ul>
 </section>
 
 <!-- Footer -->
 <footer>
-    © 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
+    © 2026 HMRAR | Designed & Powered by Bismillah Photostat Umerkot
 </footer>
 
-<!-- Sound Script -->
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    var audio = document.getElementById("welcomeSound");
 
-    audio.play().catch(function() {
-        document.addEventListener("click", function() {
-            audio.play();
-        }, { once: true });
-    });
+var audio = document.getElementById("welcomeSound");
+var played = false;
+
+function playAudio(){
+    if(!played){
+        audio.play().then(function(){
+            played = true;
+        }).catch(function(){});
+    }
+}
+
+/* Try autoplay */
+document.addEventListener("DOMContentLoaded", function(){
+    playAudio();
 });
+
+/* Desktop fallback */
+document.addEventListener("mouseover", function(){
+    playAudio();
+}, { once:true });
+
+/* Mobile fallback */
+document.addEventListener("touchstart", function(){
+    playAudio();
+}, { once:true });
+
+document.addEventListener("scroll", function(){
+    playAudio();
+}, { once:true });
+
 </script>
 
 </body>
