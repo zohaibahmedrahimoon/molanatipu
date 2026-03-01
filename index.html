@@ -7,8 +7,8 @@
 </head>
 <body>
 
-    <!-- Sound -->
-    <audio id="welcomeSound" autoplay>
+    <!-- Welcome Sound -->
+    <audio id="welcomeSound">
         <source src="assalamualaikum.mp3" type="audio/mpeg">
     </audio>
 
@@ -30,7 +30,7 @@
         <p>📍 Umerkot, Sindh</p>
     </section>
 
-    <!-- Funny Section -->
+    <!-- Funny Powers Section -->
     <section class="fun">
         <h2>Molana Tipu Powers ⚡</h2>
         <ul>
@@ -46,6 +46,19 @@
     <footer>
         © 2026 Molana Tipu | Designed by Big Brother Zohaib 😎
     </footer>
+
+    <!-- Sound Script (DO NOT TOUCH) -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var audio = document.getElementById("welcomeSound");
+
+        audio.play().catch(function() {
+            document.addEventListener("click", function() {
+                audio.play();
+            }, { once: true });
+        });
+    });
+    </script>
 
 </body>
 </html>
