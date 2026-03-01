@@ -5,127 +5,104 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ultimate Molana Tipu | Portfolio</title>
+<title>Molana Tipu | Official Website</title>
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* ===== Background ===== */
+/* ===== HERO LAYOUT ===== */
 
-body{
-    background:url("https://images.unsplash.com/photo-1584551246679-0daf3d275d0f") center/cover fixed;
-    color:white;
+.hero-container{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+padding:50px 20px;
+gap:60px;
 }
 
-/* Overlay dark effect */
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,0.65);
-    z-index:-1;
-}
-
-/* ===== Hero Layout ===== */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:60px;
-    padding:40px 20px;
-}
-
-/* Text Side */
+/* Desktop Text Alignment */
 
 .hero-text{
-    max-width:520px;
+max-width:500px;
+text-align:left;
 }
+
+/* Name Big Style */
 
 .hero-text h1{
-    font-size:60px;
-    margin:10px 0;
+font-size:52px;
+color:white;
+margin:10px 0;
 }
 
+/* Bio */
+
 .hero-text h2{
-    font-size:28px;
-    color:#f1f1f1;
+color:#f5f5f5;
+font-size:24px;
 }
 
 /* Profile Image */
 
 .profile-pic{
-    width:230px;
-    height:230px;
-    border-radius:50%;
-    border:6px solid gold;
-    object-fit:cover;
-    animation:swing 4s ease-in-out infinite;
+width:230px;
+height:230px;
+border-radius:50%;
+border:6px solid gold;
+object-fit:cover;
+animation:swing 4s ease-in-out infinite;
 }
 
 /* Swing Animation */
 
 @keyframes swing{
-    0%{transform:rotate(0deg);}
-    25%{transform:rotate(12deg);}
-    50%{transform:rotate(0deg);}
-    75%{transform:rotate(-12deg);}
-    100%{transform:rotate(0deg);}
+0%{transform:rotate(0deg);}
+25%{transform:rotate(12deg);}
+50%{transform:rotate(0deg);}
+75%{transform:rotate(-12deg);}
+100%{transform:rotate(0deg);}
 }
 
-/* Quote */
+/* Arabic Line */
 
-.arabic{
-    font-size:24px;
-    color:gold;
-    margin-top:20px;
+.arabic-quote{
+color:gold;
+font-size:22px;
+margin-top:20px;
 }
 
-/* Cards Section */
-
-.card-section{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:25px;
-    padding:60px 20px;
-}
-
-.card{
-    background:rgba(255,255,255,0.07);
-    backdrop-filter:blur(10px);
-    padding:25px;
-    border-radius:20px;
-    width:280px;
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-/* Mobile */
+/* Mobile Layout */
 
 @media(max-width:768px){
 
-.hero{
-    flex-direction:column;
-    text-align:center;
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+/* Profile must be top on mobile */
+
+.hero-container{
+order:1;
+}
+
+.hero-text{
+order:2;
+text-align:center;
 }
 
 .hero-text h1{
-    font-size:36px;
+font-size:32px;
 }
 
 .hero-text h2{
-    font-size:20px;
+font-size:18px;
 }
 
 .profile-pic{
-    width:160px;
-    height:160px;
+width:160px;
+height:160px;
 }
 
 }
@@ -136,18 +113,20 @@ body::before{
 
 <body>
 
-<!-- Audio -->
 <audio id="welcomeSound">
-<source src="assalamualaikum.mp3">
+<source src="assalamualaikum.mp3" type="audio/mpeg">
 </audio>
 
 <!-- Logo -->
-<div style="text-align:center;padding-top:25px;">
+<div class="logo" style="text-align:center;padding-top:30px;">
 <img src="photo3.png" style="width:220px;max-width:90%;">
 </div>
 
-<!-- HERO -->
-<section class="hero">
+<!-- HERO SECTION -->
+
+<section class="hero-container">
+
+<img src="photo1.jpg" class="profile-pic">
 
 <div class="hero-text">
 
@@ -160,52 +139,30 @@ body::before{
 <p>🏫 Govt Boys High School No. 02, Umerkot</p>
 <p>📍 Umerkot, Sindh</p>
 
-<div class="arabic">
-بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْم
+<div class="arabic-quote">
+watuizumantashawatuzillumantasha
 </div>
 
 </div>
-
-<img src="photo1.jpg" class="profile-pic">
 
 </section>
 
-<!-- Powers Cards -->
-<section class="card-section">
+<!-- Powers -->
 
-<div class="card">
-<h3>⚡ Molana Tipu Powers</h3>
+<section style="text-align:center;padding:60px 20px;">
+
+<h2 style="color:white;">Molana Tipu Powers ⚡</h2>
+
 <p>✔ Quran Memorization Master</p>
 <p>✔ Prayer Leader Mode Activated</p>
 <p>✔ Future Mufti in Family Meetings 😄</p>
 <p>✔ Pocket Money Negotiation Expert</p>
-</div>
-
-<div class="card">
-<h3>😂 Funny Family Level Skills</h3>
-<p>✔ Silent in Madrasa, Loud in Cricket</p>
-<p>✔ Serious Face When Called Molana Sahib</p>
-<p>✔ Cousin Annoyer but Loveable 😁</p>
-</div>
 
 </section>
 
-<footer style="text-align:center;padding:25px;color:white;">
+<footer style="text-align:center;padding:20px;color:white;">
 © 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
 </footer>
-
-<script>
-
-/* Sound Play Smart */
-
-document.addEventListener("click", function(){
-
-let audio=document.getElementById("welcomeSound");
-audio.play().catch(()=>{});
-
-},{once:true});
-
-</script>
 
 </body>
 </html>
