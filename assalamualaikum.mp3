@@ -1,8 +1,1 @@
-<script>
-window.onload = function() {
-    var audio = document.getElementById("welcomeSound");
-    audio.play().catch(() => {
-        document.body.addEventListener("click", () => audio.play(), { once: true });
-    });
-};
-</script>
+
