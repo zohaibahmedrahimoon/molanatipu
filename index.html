@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <!-- VERY IMPORTANT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Molana Tipu | Official Website</title>
     <link rel="stylesheet" href="style.css">
 
     <style>
-    /* 15 Degree Swing Animation */
+
+    /* Override profile animation with premium swing */
     .profile-pic {
         width: 180px;
         height: 180px;
@@ -24,9 +29,50 @@
         75% { transform: rotate(-15deg); }
         100% { transform: rotate(0deg); }
     }
+
+    /* ================= MOBILE OPTIMIZATION ================= */
+    @media (max-width: 768px) {
+
+        h1 {
+            font-size: 24px;
+        }
+
+        h2 {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 15px;
+        }
+
+        .profile-pic {
+            width: 130px;
+            height: 130px;
+            animation: swingMobile 4s ease-in-out infinite;
+        }
+
+        @keyframes swingMobile {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(10deg); }
+            50% { transform: rotate(0deg); }
+            75% { transform: rotate(-10deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .logo {
+            font-size: 22px;
+        }
+
+        footer {
+            font-size: 13px;
+            padding: 15px;
+        }
+    }
+
     </style>
 
 </head>
+
 <body>
 
     <!-- Welcome Sound -->
@@ -66,7 +112,7 @@
 
     <!-- Footer -->
     <footer>
-    © 2026 Molana Tipu | All Rights Reserved by Bismillah Photostat Umerkot
+        © 2026 Molana Tipu | Designed & Powered by Bismillah Photostat Umerkot
     </footer>
 
     <!-- Sound Script -->
